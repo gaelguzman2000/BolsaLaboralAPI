@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace BolsaLaboralWeb.Domain.Core.Interfaces
 {
-    interface IHojaVidaCvRepository
+    public interface IHojaVidaCvRepository
     {
         Task<bool> DeleteHojaVidaCv(int id);
         Task<IEnumerable<HojaVidaCv>> GetHojaVidaCv();

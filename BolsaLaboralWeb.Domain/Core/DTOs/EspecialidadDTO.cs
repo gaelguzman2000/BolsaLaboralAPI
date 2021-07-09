@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace BolsaLaboralWeb.Domain.Core.DTOs
 {
-    class EspecialidadDTO
+    public class EspecialidadDTO
     {
+        public int IdCatEmpleo { get; set; }
+        public string Nombre { get; set; }
+    }
+
+    public class EspecialidadPostDTO
+    {
+
+        public string Nombre { get; set; }
     }
 }

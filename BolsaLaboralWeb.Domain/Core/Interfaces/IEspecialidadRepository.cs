@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace BolsaLaboralWeb.Domain.Core.Interfaces
 {
-    interface IEspecialidadRepository
+    public interface IEspecialidadRepository
     {
         Task<IEnumerable<Especialidad>> GetEspecialidad();
         Task<Especialidad> GetEspecialidadById(int id);

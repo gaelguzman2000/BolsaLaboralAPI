@@ -1,4 +1,5 @@
 ﻿using BolsaLaboralWeb.Domain.Core.Entities;
+using BolsaLaboralWeb.Domain.Core.Interfaces;
 using BolsaLaboralWeb.Domain.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BolsaLaboralWeb.Domain.Infrastructure.Repositories
 {
-    class EspecialidadRepository : IEspecialidadRepository
+    public class EspecialidadRepository : IEspecialidadRepository
     {
 
         private readonly Bolsa_LaboralContext _context;

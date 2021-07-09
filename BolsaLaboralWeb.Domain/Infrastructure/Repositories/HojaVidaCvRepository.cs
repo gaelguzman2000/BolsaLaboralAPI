@@ -1,4 +1,5 @@
 ﻿using BolsaLaboralWeb.Domain.Core.Entities;
+using BolsaLaboralWeb.Domain.Core.Interfaces;
 using BolsaLaboralWeb.Domain.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BolsaLaboralWeb.Domain.Infrastructure.Repositories
 {
-    class HojaVidaCvRepository : IHojaVidaCvRepository
+    public class HojaVidaCvRepository : IHojaVidaCvRepository
     {
         private readonly Bolsa_LaboralContext _context;
 
@@ -25,7 +26,7 @@ namespace BolsaLaboralWeb.Domain.Infrastructure.Repositories
 
         public async Task<HojaVidaCv> GetHojaVidaCvById(int id)
         {
-            return await _context.HojaVidaCv.Where(x => x.IdHojaVidaCv == id).FirstOrDefaultAsync();
+            return await _context.HojaVidaCv.Where(x => x.IdHojaVida == id).FirstOrDefaultAsync();
         }
 
         public async Task InsertHojaVidaCv(HojaVidaCv HojaVidaCv)
@@ -37,7 +38,7 @@ namespace BolsaLaboralWeb.Domain.Infrastructure.Repositories
         public async Task<bool> UpdateHojaVidaCv(HojaVidaCv HojaVidaCv)
         {
             var HojaVidaCvNow = await _context.HojaVidaCv
-                                .Where(x => x.IdHojaVidaCv == HojaVidaCv.IdHojaVidaCv).FirstOrDefaultAsync();
+                                .Where(x => x.IdHojaVida == HojaVidaCv.IdHojaVida).FirstOrDefaultAsync();
 
 
             HojaVidaCvNow.GradoInstruccion = HojaVidaCv.GradoInstruccion;
@@ -61,7 +62,7 @@ namespace BolsaLaboralWeb.Domain.Infrastructure.Repositories
         public async Task<bool> DeleteHojaVidaCv(int id)
         {
             var HojaVidaCvNow = await _context.HojaVidaCv
-                                .Where(x => x.IdHojaVidaCv == id).FirstOrDefaultAsync();
+                                .Where(x => x.IdHojaVida == id).FirstOrDefaultAsync();
 
             if (HojaVidaCvNow == null)
                 return false;
