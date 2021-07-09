@@ -34,5 +34,6 @@ namespace BolsaLaboralWeb.Domain.Core.Entities
         public virtual Especialidad IdEspecialidad1Navigation { get; set; }
         public virtual NivelExperiencia IdNivelExperiencia2Navigation { get; set; }
         public virtual ICollection<Postulante> Postulante { get; set; }
+        public int IdHojaVidaCv { get; internal set; }
     }
 }
