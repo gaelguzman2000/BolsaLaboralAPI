@@ -30,16 +30,7 @@ namespace BolsaLaboralWeb.Domain.Infrastructure.Mappings
             CreateMap<EmpresaDTO, Empresa>();
             CreateMap<EmpresaPostDTO, Empresa>();
 
-            CreateMap<Especialidad, EspecialidadDTO>();
-
-
-            CreateMap<HojaVidaCv, HojaVidaCvDTO>();
-            CreateMap<HojaVidaCvDTO, HojaVidaCv>();
-            CreateMap<HojaVidaCvPostDTO, HojaVidaCv>();
-
-            CreateMap<Sector, SectorDTO>();
-            CreateMap<Ubigeo, UbigeoDTO>();
-        }
+        
 
     }
 }
