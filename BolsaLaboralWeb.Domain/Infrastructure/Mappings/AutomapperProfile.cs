@@ -36,6 +36,9 @@ namespace BolsaLaboralWeb.Domain.Infrastructure.Mappings
             CreateMap<HojaVidaCv, HojaVidaCvDTO>();
             CreateMap<HojaVidaCvDTO, HojaVidaCv>();
             CreateMap<HojaVidaCvPostDTO, HojaVidaCv>();
+
+            CreateMap<Sector, SectorDTO>();
+            CreateMap<Ubigeo, UbigeoDTO>();
         }
 
     }
